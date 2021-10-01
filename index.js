@@ -17,7 +17,7 @@ for (const file of commandFiles) {
 require("http").createServer((req, res) => res.end("alive")).listen();
 client.once('ready', () => {
 
-    console.log(chalk.bgGreenBright.black("[" + client.user.username + "]"), "Bot Online");
+    console.log(chalk.bgGreenBright.black("[" + client.user.username + "]"), "Test100comand");
     client.user.setActivity('Made by DarkThunder', {
         type: "WATCHING"
     });
@@ -27,7 +27,6 @@ client.on('messageDelete', async message => {
     db.set(`msg_${message.channel.id}`, message.content)
     db.set(`author_${message.channel.id}`, message.author.id)
 })
-
 client.on('message', async message => {
 	const prefix = PREFIX
 
